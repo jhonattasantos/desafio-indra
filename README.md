@@ -1,3 +1,29 @@
+### Instação da aplicação
+
+Para esse projeto você vai **precisar ter o docker instalado** na sua Máquina
+
+1. Faça o clone do projeto
+  ```
+   git clone https://github.com/jhonattasantos/desafio-indra.git desafio-jhonatta
+  ```
+2. Entre no diretorio
+  ```
+   cd desafio-jhonatta
+  ```
+
+3. Rode os comando abaixo para subir a aplicação(*Obs: A 15000 vai ser utilizada*):
+```
+make prepare
+make up
+```
+
+4. Entre no navegador e acesse http://localhost:15000/
+
+5. Para rodar os teste use o comando
+```
+make test
+```
+
 # Desafio Indra - Vaga para programador PHP
 
 Por favor leiam este documento do começo ao fim, com muita atenção. <br>
