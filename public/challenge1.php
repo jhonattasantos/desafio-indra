@@ -3,7 +3,7 @@
     use Indra\Resistor\ResistorService;
 
     $service = new ResistorService(); 
-    $selectedColor = $service->getSelectedColor($_GET['cor']);
+    $selectedColor = $service->getSelectedColor($_GET['color']);
 ?>
         
 <section>
@@ -19,10 +19,10 @@
         <form>
             <div class="form-group">
                 <label>Selecione uma cor: </label>
-                <select name="cor" class="form-control">
+                <select name="color" class="form-control">
                     <option value="">Selecione uma cor</option>
                     <?php foreach($service->getData() as $key=>$value)  : ?>
-                        <?php $selected = $key == $_GET['cor'] ? 'selected' : ''; ?>
+                        <?php $selected = $key == $_GET['color'] ? 'selected' : ''; ?>
                         <option value="<?php echo $key;?>" <?php echo $selected; ?> ><?php echo $value;?></option>         
                     <?php endforeach; ?>
                 </select>
@@ -34,7 +34,7 @@
 
         <?php if(!is_null($selectedColor)) : ?>
             <div>
-                <h3>Valor numero de Resistencia: <?php echo $selectedColor; ?></h3>
+                <h3>Valor numero de Resistencia: <?php echo $_GET["color"]; ?></h3>
             </div>
         <?php endif; ?>
     </div>
